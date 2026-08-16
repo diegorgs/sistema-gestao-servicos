@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Cadastro from './pages/Cadastro'
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">
-        Sistema de Gestão de Serviços
-      </h1>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
